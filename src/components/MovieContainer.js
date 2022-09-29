@@ -45,9 +45,9 @@ const MovieContainer = ({ title, movietype }) => {
 
     return (
         <>
-            <h2 className='mt-5 headline'>{title}</h2>
+            <h3 className='mt-5 headline'>{title}</h3>
 
-            <Row xs={1} md={6} lg={8} className="g-2">
+            <Row xs={3} md={6} lg={8} className="g-2">
                 {/* Loop Area */}
                 {moviesdata.map((moviedata) => {
                     return (
@@ -63,7 +63,6 @@ const MovieContainer = ({ title, movietype }) => {
                 })}
 
             </Row>
-
 
         </>
     )

@@ -21,6 +21,31 @@ body {
   color: #fffffe;
 }
 
+.appnav__>.appnavlink__ {
+  color: #b8c1ec;
+}
+
+.appnav__>.appnavlink__:hover {
+  color: #eebbc3;
+}
+
+.appbarsearch__ {
+  border-radius: 25px;
+  border: 0;
+}
+
+.appbarbutton__ {
+  border-radius: 25px;
+  border: 0;
+  background-color: #eebbc3 !important;
+  color: #232946 !important;
+}
+
+.appbarbutton__:hover {
+  background-color: #eebbc3 !important;
+  color: #232946 !important;
+}
+
 .moviecard__ {
   background: #232946;
   border: 0;
