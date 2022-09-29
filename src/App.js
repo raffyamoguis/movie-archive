@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { Container } from 'react-bootstrap';
+
+import AppBar from './components/AppBar';
+import MovieContainer from './components/MovieContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <AppBar title='Movie Archive' />
+      <Container>
+
+        <MovieContainer title='Explore' movietype='TRENDING' />
+        <MovieContainer title='Latest Movies' movietype='LATESTMOVIES' />
+        <MovieContainer title='Latest TV Shows' movietype='LATESTTVSHOW' />
+
+      </Container>
+    </>
+  )
 }
 
 export default App;
