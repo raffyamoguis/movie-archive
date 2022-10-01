@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav, Form, Button } from 'react-bootstrap'
 
 const AppBar = ({ title }) => {
@@ -7,10 +8,18 @@ const AppBar = ({ title }) => {
             <Container fluid>
                 <Navbar.Brand className='appbrand__' href="/">{title}</Navbar.Brand>
                 <Nav className="mr-auto appnav__">
-                    <Nav.Link href="#home" className='appnavlink__'>Home</Nav.Link>
-                    <Nav.Link href="#features" className='appnavlink__'>Genre</Nav.Link>
-                    <Nav.Link href="#features" className='appnavlink__'>Country</Nav.Link>
-                    <Nav.Link href="#pricing" className='appnavlink__'>Coming Soon</Nav.Link>
+                    <Link to='/'>
+                        <Nav.Link href="#home" className='appnavlink__'>Home</Nav.Link>
+                    </Link>
+                    <Link to='/genre'>
+                        <Nav.Link href="#genre" className='appnavlink__'>Genre</Nav.Link>
+                    </Link>
+                    <Link to='/country'>
+                        <Nav.Link href="#country" className='appnavlink__'>Country</Nav.Link>
+                    </Link>
+                    <Link to='/comingsoon'>
+                        <Nav.Link href="#comingsoon" className='appnavlink__'>Coming Soon</Nav.Link>
+                    </Link>
                 </Nav>
                 <Form className="d-flex">
                     <Form.Control

@@ -21,11 +21,19 @@ body {
   color: #fffffe;
 }
 
-.appnav__>.appnavlink__ {
+.appnav__>a {
+  text-decoration: none;
+}
+
+.appnav__>a>.appnavlink__ {
   color: #b8c1ec;
 }
 
-.appnav__>.appnavlink__:hover {
+.appnav__>a>.appnavlink__:hover {
+  color: #eebbc3;
+}
+
+.appnav__>a>.appnavlink__.active {
   color: #eebbc3;
 }
 

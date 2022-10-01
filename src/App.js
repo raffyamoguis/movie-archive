@@ -1,22 +1,27 @@
 import './App.css';
 import { Container } from 'react-bootstrap';
+import { Routes, Route } from "react-router-dom";
 
 import AppBar from './components/AppBar';
-import MovieContainer from './components/MovieContainer';
+import Home from './components/Home';
+import Genre from './components/Genre';
+import Country from './components/Country';
+import ComingSoon from './components/ComingSoon';
 
 function App() {
   return (
     <>
       <AppBar title='Movie Archive' />
       <Container>
-
-        <MovieContainer title='Explore' movietype='TRENDING' />
-        <MovieContainer title='Latest Movies' movietype='LATESTMOVIES' />
-        <MovieContainer title='Latest TV Shows' movietype='LATESTTVSHOW' />
-
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/genre" element={<Genre />} />
+          <Route path="/country" element={<Country />} />
+          <Route path="/comingsoon" element={<ComingSoon />} />
+        </Routes>
       </Container>
     </>
   )
 }
 
-export default App;
+export default App; 
